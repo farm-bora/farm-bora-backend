@@ -22,6 +22,8 @@ class PlantDetail(generics.RetrieveAPIView):
 class PlantImageSearch(views.APIView):
     """Search for plant diseases"""
 
+    serializer_class = PlantDiseaseSearchSerializer
+
     def post(self, request, format=None):
         serializer = PlantDiseaseSearchSerializer(data=request.data)
         if serializer.is_valid():
@@ -45,7 +47,6 @@ class PlantImageSearch(views.APIView):
 
             result_dict = json.loads(result_json)
             result_dict["time"] = result[1]
-            print(result_dict)
 
             return Response(result_dict)
         else:

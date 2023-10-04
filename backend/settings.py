@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     # 3rd party
     "rest_framework",
     "corsheaders",
+    "drf_spectacular",
     # Apps
     "plants.apps.PlantsConfig",
 ]
@@ -137,6 +138,7 @@ REST_FRAMEWORK = {
     "DEFAULT_PERMISSION_CLASSES": [
         "rest_framework.permissions.AllowAny",
     ],
+    "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
 CORS_ALLOWED_ORIGINS = (
@@ -145,3 +147,9 @@ CORS_ALLOWED_ORIGINS = (
 )
 
 CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+
+SPECTACULAR_SETTINGS = {
+    "TITLE": "Leaf AI Project",
+    "DESCRIPTION": "Leaf Disease Identification API",
+    "VERSION": "1.0.0",
+}
