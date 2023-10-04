@@ -11,3 +11,7 @@ class PlantSerializer(serializers.ModelSerializer):
             "botanical_name",
             "details",
         )
+
+
+class PlantDiseaseSearchSerializer(serializers.Serializer):
+    image_base64 = serializers.CharField()

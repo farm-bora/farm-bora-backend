@@ -144,4 +144,4 @@ CORS_ALLOWED_ORIGINS = (
     "http://localhost:8000",
 )
 
-CSRF_TRUSTED_ORIGINS = ["localhost:3000"]
+CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
