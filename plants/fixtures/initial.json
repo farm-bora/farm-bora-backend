@@ -1,0 +1,101 @@
+[
+    {
+        "model": "plants.plant",
+        "pk": 1,
+        "fields": {
+            "name": "Apple",
+            "botanical_name": "Malus pumila"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 2,
+        "fields": {
+            "name": "Blueberry",
+            "botanical_name": "Vaccinium sect. Cyanococcus"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 3,
+        "fields": {
+            "name": "Cherry",
+            "botanical_name": "Prunus avium"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 4,
+        "fields": {
+            "name": "Corn",
+            "botanical_name": "Zea mays"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 5,
+        "fields": {
+            "name": "Grape",
+            "botanical_name": "Vitis vinifera"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 6,
+        "fields": {
+            "name": "Orange",
+            "botanical_name": "Citrus × sinensis"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 7,
+        "fields": {
+            "name": "Peach",
+            "botanical_name": "Prunus persica"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 8,
+        "fields": {
+            "name": "Pepper, bell",
+            "botanical_name": "Capsicum annuum"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 9,
+        "fields": {
+            "name": "Potato",
+            "botanical_name": "Solanum tuberosum"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 10,
+        "fields": {
+            "name": "Raspberry",
+            "botanical_name": "Rubus idaeus"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 11,
+        "fields": {
+            "name": "Soybean",
+            "botanical_name": "Glycine max"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 12,
+        "fields": {
+            "name": "Squash",
+            "botanical_name": "Cucurbita"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 13,
+        "fields": {
+            "name": "Strawberry",
+            "botanical_name": "Fragaria × ananassa"
+        }
+    },
+    {   "model": "plants.plant",
+        "pk": 14,
+        "fields": {
+            "name": "Tomato",
+            "botanical_name": "Solanum lycopersicum"
+        }
+    }
+]
