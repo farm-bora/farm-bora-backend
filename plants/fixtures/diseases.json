@@ -1,0 +1,26 @@
+[
+    {
+        "model": "plants.disease",
+        "pk": 1,
+        "fields": {
+            "name": "Apple scab",
+            "plant": 1
+        }
+    },
+    {
+        "model": "plants.disease",
+        "pk": 2,
+        "fields": {
+            "name": "Black rot",
+            "plant": 1
+        }
+    },
+    {
+        "model": "plants.disease",
+        "pk": 3,
+        "fields": {
+            "name": "Cedar apple rust",
+            "plant": 1
+        }
+    }
+]
