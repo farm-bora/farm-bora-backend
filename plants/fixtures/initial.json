@@ -4,98 +4,112 @@
         "pk": 1,
         "fields": {
             "name": "Apple",
-            "botanical_name": "Malus pumila"
+            "botanical_name": "Malus pumila",
+            "image": "plants/apple_sebbi-strauch--TMexiWenoY-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 2,
         "fields": {
             "name": "Blueberry",
-            "botanical_name": "Vaccinium sect. Cyanococcus"
+            "botanical_name": "Vaccinium sect. Cyanococcus",
+            "image": "plants/blueberry_alex-ushakoff-6MynOBZgig0-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 3,
         "fields": {
             "name": "Cherry",
-            "botanical_name": "Prunus avium"
+            "botanical_name": "Prunus avium",
+            "image": "plants/cherry_burak-tonc-bbxwU3HtRkM-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 4,
         "fields": {
             "name": "Corn",
-            "botanical_name": "Zea mays"
+            "botanical_name": "Zea mays",
+            "image": "plants/corn_katherine-volkovski-Q_MJjEN14uk-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 5,
         "fields": {
             "name": "Grape",
-            "botanical_name": "Vitis vinifera"
+            "botanical_name": "Vitis vinifera",
+            "image": "plants/grape_zachary-brown-s1zqrPUpNzs-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 6,
         "fields": {
             "name": "Orange",
-            "botanical_name": "Citrus × sinensis"
+            "botanical_name": "Citrus × sinensis",
+            "image": "plants/orange_hoyoung-choi-4XoCxdMnWFg-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 7,
         "fields": {
             "name": "Peach",
-            "botanical_name": "Prunus persica"
+            "botanical_name": "Prunus persica",
+            "image": "plants/peach_jason-leung-K1PU6sqsFPs-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 8,
         "fields": {
             "name": "Pepper, bell",
-            "botanical_name": "Capsicum annuum"
+            "botanical_name": "Capsicum annuum",
+            "image": "plants/bell-pepper_jonathan-borba-ZvCuMalwWwU-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 9,
         "fields": {
             "name": "Potato",
-            "botanical_name": "Solanum tuberosum"
+            "botanical_name": "Solanum tuberosum",
+            "image": "plants/potato_eric-prouzet-52DMHPBAvXY-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 10,
         "fields": {
             "name": "Raspberry",
-            "botanical_name": "Rubus idaeus"
+            "botanical_name": "Rubus idaeus",
+            "image": "plants/raspberry_sneha-cecil-9nQQUs_Ad7I-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 11,
         "fields": {
             "name": "Soybean",
-            "botanical_name": "Glycine max"
+            "botanical_name": "Glycine max",
+            "image": "plants/soybean_daniela-paola-alchapar-AlqMN9ub3Aw-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 12,
         "fields": {
             "name": "Squash",
-            "botanical_name": "Cucurbita"
+            "botanical_name": "Cucurbita",
+            "image": "plants/squash_brigitte-tohm-OmCUSp8o7a4-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 13,
         "fields": {
             "name": "Strawberry",
-            "botanical_name": "Fragaria × ananassa"
+            "botanical_name": "Fragaria × ananassa",
+            "image": "plants/strawberry_justus-menke-gkANpt2K2Hk-unsplash.jpg"
         }
     },
     {   "model": "plants.plant",
         "pk": 14,
         "fields": {
             "name": "Tomato",
-            "botanical_name": "Solanum lycopersicum"
+            "botanical_name": "Solanum lycopersicum",
+            "image": "plants/tomato_dan-gold-4LiUI-Y2mI8-unsplash.jpg"
         }
     }
 ]
