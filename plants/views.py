@@ -5,8 +5,12 @@ import uuid
 import json
 from gradio_client import Client
 
-from .models import Plant
-from .serializers import PlantSerializer, PlantDiseaseSearchSerializer
+from .models import Plant, Disease
+from .serializers import (
+    PlantSerializer,
+    PlantDiseaseSearchSerializer,
+    DiseaseSerializer,
+)
 
 
 class PlantList(generics.ListAPIView):
@@ -17,6 +21,14 @@ class PlantList(generics.ListAPIView):
 class PlantDetail(generics.RetrieveAPIView):
     queryset = Plant.objects.all()
     serializer_class = PlantSerializer
+
+
+class DiseaseList(generics.ListAPIView):
+    queryset = Disease.objects.all()
+    serializer_class = DiseaseSerializer
+
+    def get_queryset(self):
+        return Disease.objects.filter(plant_id=self.kwargs.get("plant_id"))
 
 
 class PlantImageSearch(views.APIView):
