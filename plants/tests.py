@@ -70,6 +70,10 @@ class DiseaseModelTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(len(json.loads(response.content)["diseases"]), 1)
 
+    def test_api_listview(self) -> None:
+        response = self.client.get(reverse("disease_list", args=[self.plant.id]))
+        self.assertEqual(len(json.loads(response.content)), 2)
+
     def test_api_detailview(self) -> None:
         response = self.client.get(
             reverse("disease_details", args=[self.plant.id, self.disease.id])
