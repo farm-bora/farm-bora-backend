@@ -9,7 +9,7 @@ urlpatterns = [
     path(
         "<int:plant_id>/diseases/<int:pk>",
         DiseaseDetail.as_view(),
-        name="disease_detail",
+        name="disease_details",
     ),
     path("", PlantList.as_view(), name="plant_list"),
 ]
