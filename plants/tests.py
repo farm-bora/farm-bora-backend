@@ -3,7 +3,7 @@ from django.urls import reverse
 from rest_framework import status
 from rest_framework.test import APITestCase
 
-from .models import Plant
+from .models import Plant, Disease
 
 
 # Create your tests here.
@@ -36,3 +36,21 @@ class PlantModelTest(TestCase):
         self.assertEqual(response.status_code, status.HTTP_200_OK)
         self.assertEqual(Plant.objects.count(), 1)
         self.assertContains(response, "Zea Mays")
+
+
+class DiseaseModelTest(TestCase):
+    @classmethod
+    def setUpTestData(cls) -> None:
+        cls.plant = Plant.objects.create(
+            name="Maize",
+            botanical_name="Zea Mays",
+            details="Also called corn by our friends from the West",
+        )
+        cls.disease = Disease.objects.create(
+            plant=cls.plant, name="Lorem Ipsum", details="Dolor sit amet consecteteur"
+        )
+
+    def test_model_content(self) -> None:
+        self.assertEqual(self.disease.name, "Lorem Ipsum")
+        self.assertEqual(self.disease.details, "Dolor sit amet consecteteur")
+        self.assertEqual(self.disease.plant.name, "Maize")
