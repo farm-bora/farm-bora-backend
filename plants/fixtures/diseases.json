@@ -4,6 +4,7 @@
     "pk": 1,
     "fields": {
       "name": "Apple scab",
+      "slug": "apple___apple_scab",
       "plant": 1
     }
   },
@@ -12,6 +13,7 @@
     "pk": 2,
     "fields": {
       "name": "Black rot",
+      "slug": "apple___black_rot",
       "plant": 1
     }
   },
@@ -20,6 +22,7 @@
     "pk": 3,
     "fields": {
       "name": "Cedar apple rust",
+      "slug": "apple___cedar_apple_rust",
       "plant": 1
     }
   },
@@ -28,6 +31,7 @@
     "pk": 4,
     "fields": {
       "name": "Powdery mildew",
+      "slug": "cherry___powdery_mildew",
       "plant": 3
     }
   },
@@ -36,6 +40,7 @@
     "pk": 5,
     "fields": {
       "name": "Gray leaf spot",
+      "slug": "corn___cercospora_leaf_spot gray_leaf_spot",
       "plant": 4
     }
   },
@@ -44,6 +49,7 @@
     "pk": 6,
     "fields": {
       "name": "Common rust",
+      "slug": "corn___common_rust",
       "plant": 4
     }
   },
@@ -52,6 +58,7 @@
     "pk": 7,
     "fields": {
       "name": "Northern leaf blight",
+      "slug": "corn___northern_leaf_blight",
       "plant": 4
     }
   },
@@ -60,6 +67,7 @@
     "pk": 8,
     "fields": {
       "name": "Black rot",
+      "slug": "grape___black_rot",
       "plant": 5
     }
   },
@@ -68,6 +76,7 @@
     "pk": 9,
     "fields": {
       "name": "Esca (Black Measles)",
+      "slug": "grape___esca_(black_measles)",
       "plant": 5
     }
   },
@@ -75,7 +84,8 @@
     "model": "plants.disease",
     "pk": 10,
     "fields": {
-      "name": "Leaf blight (Isariopsis Leaf Spot)",
+      "name": "eaf blight (Isariopsis Leaf Spot)",
+      "slug": "grape___leaf_blight_(isariopsis_leaf_spot)",
       "plant": 5
     }
   },
@@ -84,6 +94,7 @@
     "pk": 11,
     "fields": {
       "name": "Haunglongbing (Citrus greening)",
+      "slug": "orange___haunglongbing_(citrus_greening)",
       "plant": 6
     }
   },
@@ -92,6 +103,7 @@
     "pk": 12,
     "fields": {
       "name": "Bacterial Spot",
+      "slug": "peach___bacterial_spot",
       "plant": 7
     }
   },
@@ -100,6 +112,7 @@
     "pk": 13,
     "fields": {
       "name": "Bacterial Spot",
+      "slug": "pepper,_bell___bacterial_spot",
       "plant": 8
     }
   },
@@ -108,6 +121,7 @@
     "pk": 14,
     "fields": {
       "name": "Early blight",
+      "slug": "potato___early_blight",
       "plant": 9
     }
   },
@@ -116,6 +130,7 @@
     "pk": 15,
     "fields": {
       "name": "Late blight",
+      "slug": "potato___late_blight",
       "plant": 9
     }
   },
@@ -124,6 +139,7 @@
     "pk": 16,
     "fields": {
       "name": "Powdery mildew",
+      "slug": "squash___powdery_mildew",
       "plant": 12
     }
   },
@@ -132,6 +148,7 @@
     "pk": 17,
     "fields": {
       "name": "Leaf scorch",
+      "slug": "strawberry___leaf_scorch",
       "plant": 13
     }
   },
@@ -140,6 +157,7 @@
     "pk": 18,
     "fields": {
       "name": "Bacterial spot",
+      "slug": "tomato___bacterial_spot",
       "plant": 14
     }
   },
@@ -148,6 +166,7 @@
     "pk": 19,
     "fields": {
       "name": "Early blight",
+      "slug": "tomato___early_blight",
       "plant": 14
     }
   },
@@ -156,6 +175,7 @@
     "pk": 20,
     "fields": {
       "name": "Late blight",
+      "slug": "tomato___late_blight",
       "plant": 14
     }
   },
@@ -164,6 +184,7 @@
     "pk": 21,
     "fields": {
       "name": "Leaf mold",
+      "slug": "tomato___leaf_mold",
       "plant": 14
     }
   },
@@ -172,6 +193,7 @@
     "pk": 22,
     "fields": {
       "name": "Septoria leaf spot",
+      "slug": "tomato___septoria_leaf_spot",
       "plant": 14
     }
   },
@@ -180,6 +202,7 @@
     "pk": 23,
     "fields": {
       "name": "Spider mites",
+      "slug": "tomato___spider_mites two-spotted_spider_mite",
       "plant": 14
     }
   },
@@ -188,6 +211,7 @@
     "pk": 24,
     "fields": {
       "name": "Target spot",
+      "slug": "tomato___target_spot",
       "plant": 14
     }
   },
@@ -196,6 +220,7 @@
     "pk": 25,
     "fields": {
       "name": "Yellow leaf curl virus",
+      "slug": "tomato___tomato_yellow_leaf_curl_virus",
       "plant": 14
     }
   },
@@ -204,6 +229,7 @@
     "pk": 26,
     "fields": {
       "name": "Mosaic virus",
+      "slug": "tomato___tomato_mosaic_virus",
       "plant": 14
     }
   }

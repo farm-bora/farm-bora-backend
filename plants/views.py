@@ -58,18 +58,42 @@ class PlantImageSearch(views.APIView):
             with open(fpath, "wb") as f:
                 f.write(base64.b64decode(encoded_image))
 
-        try:
-            client = Client("http://localhost:7860/")
-            result = client.predict(fpath, api_name="/predict")
-            with open(result[0], "r") as f:
-                result_json = f.read()
+            try:
+                client = Client("http://localhost:7860/")
+                result = client.predict(fpath, api_name="/predict")
+                with open(result[0], "r") as f:
+                    result_json = f.read()
 
-            result_dict = json.loads(result_json)
-            result_dict["time"] = result[1]
+                result_dict = json.loads(result_json)
+                result_dict["time"] = result[1]
 
-            return Response(result_dict)
-        except:
-            result_dict = {"message": "Could not reach AI Model"}
-            return Response(result_dict, 503)
+                print(result_dict["confidences"])
+                for i, prediction in enumerate(result_dict["confidences"]):
+                    slug_label = prediction["label"].lower()
+                    plant_label = slug_label.split("___")[0]
+                    disease_label = slug_label.split("___")[1]
+
+                    print(
+                        f"[INFO] Searching Slug Label: {slug_label} Disease: {disease_label}"
+                    )
+                    if disease_label == "healthy":
+                        plant = Plant.objects.get(slug=plant_label)
+
+                        result_dict["confidences"][i]["diagnosis"] = "healthy"
+                        result_dict["confidences"][i]["plant_id"] = plant.id
+                        # continue
+                    else:
+                        disease = Disease.objects.get(slug=slug_label)
+
+                        print(f"Slug Label: {slug_label} : {disease.name} : ")
+                        result_dict["confidences"][i]["diagnosis"] = "not healthy"
+                        result_dict["confidences"][i]["disease_id"] = disease.id
+                        result_dict["confidences"][i]["plant_id"] = disease.plant_id
+
+                return Response(result_dict)
+            except Exception as error:
+                print(f"Exception {__name__}:: {error}")
+                result_dict = {"message": "Could not reach AI Model"}
+                return Response(result_dict, 503)
         else:
             return Response(serializer.errors, status=422)
