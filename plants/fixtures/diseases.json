@@ -1,26 +1,210 @@
 [
-    {
-        "model": "plants.disease",
-        "pk": 1,
-        "fields": {
-            "name": "Apple scab",
-            "plant": 1
-        }
-    },
-    {
-        "model": "plants.disease",
-        "pk": 2,
-        "fields": {
-            "name": "Black rot",
-            "plant": 1
-        }
-    },
-    {
-        "model": "plants.disease",
-        "pk": 3,
-        "fields": {
-            "name": "Cedar apple rust",
-            "plant": 1
-        }
+  {
+    "model": "plants.disease",
+    "pk": 1,
+    "fields": {
+      "name": "Apple scab",
+      "plant": 1
     }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 2,
+    "fields": {
+      "name": "Black rot",
+      "plant": 1
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 3,
+    "fields": {
+      "name": "Cedar apple rust",
+      "plant": 1
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 4,
+    "fields": {
+      "name": "Powdery mildew",
+      "plant": 3
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 5,
+    "fields": {
+      "name": "Gray leaf spot",
+      "plant": 4
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 6,
+    "fields": {
+      "name": "Common rust",
+      "plant": 4
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 7,
+    "fields": {
+      "name": "Northern leaf blight",
+      "plant": 4
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 8,
+    "fields": {
+      "name": "Black rot",
+      "plant": 5
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 9,
+    "fields": {
+      "name": "Esca (Black Measles)",
+      "plant": 5
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 10,
+    "fields": {
+      "name": "Leaf blight (Isariopsis Leaf Spot)",
+      "plant": 5
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 11,
+    "fields": {
+      "name": "Haunglongbing (Citrus greening)",
+      "plant": 6
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 12,
+    "fields": {
+      "name": "Bacterial Spot",
+      "plant": 7
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 13,
+    "fields": {
+      "name": "Bacterial Spot",
+      "plant": 8
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 14,
+    "fields": {
+      "name": "Early blight",
+      "plant": 9
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 15,
+    "fields": {
+      "name": "Late blight",
+      "plant": 9
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 16,
+    "fields": {
+      "name": "Powdery mildew",
+      "plant": 12
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 17,
+    "fields": {
+      "name": "Leaf scorch",
+      "plant": 13
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 18,
+    "fields": {
+      "name": "Bacterial spot",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 19,
+    "fields": {
+      "name": "Early blight",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 20,
+    "fields": {
+      "name": "Late blight",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 21,
+    "fields": {
+      "name": "Leaf mold",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 22,
+    "fields": {
+      "name": "Septoria leaf spot",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 23,
+    "fields": {
+      "name": "Spider mites",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 24,
+    "fields": {
+      "name": "Target spot",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 25,
+    "fields": {
+      "name": "Yellow leaf curl virus",
+      "plant": 14
+    }
+  },
+  {
+    "model": "plants.disease",
+    "pk": 26,
+    "fields": {
+      "name": "Mosaic virus",
+      "plant": 14
+    }
+  }
 ]
