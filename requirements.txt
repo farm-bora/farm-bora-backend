@@ -7,3 +7,5 @@ packaging==23.1
 pytz==2023.3.post1
 sqlparse==0.4.4
 whitenoise==6.5.0
+drf-spectacular==0.26.5
+gradio_client==0.5.3

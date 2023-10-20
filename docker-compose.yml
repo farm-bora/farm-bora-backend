@@ -1,0 +1,11 @@
+version: "3"
+services:
+  runner:
+    build: .
+    image: farm_bora/backend
+    # command: python /server/manage.py runserver 0.0.0.0:8000
+    environment:
+      ML_API: "http://0.0.0.0:7860"
+    # ports:
+    #   - 8000:8000
+    network_mode: "host"
