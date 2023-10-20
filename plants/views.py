@@ -58,6 +58,7 @@ class PlantImageSearch(views.APIView):
             with open(fpath, "wb") as f:
                 f.write(base64.b64decode(encoded_image))
 
+        try:
             client = Client("http://localhost:7860/")
             result = client.predict(fpath, api_name="/predict")
             with open(result[0], "r") as f:
@@ -67,5 +68,8 @@ class PlantImageSearch(views.APIView):
             result_dict["time"] = result[1]
 
             return Response(result_dict)
+        except:
+            result_dict = {"message": "Could not reach AI Model"}
+            return Response(result_dict, 503)
         else:
             return Response(serializer.errors, status=422)
