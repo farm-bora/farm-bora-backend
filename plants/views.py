@@ -81,7 +81,7 @@ class PlantImageSearch(views.APIView):
 
                         result_dict["confidences"][i]["diagnosis"] = "healthy"
                         result_dict["confidences"][i]["plant_id"] = plant.id
-                        # continue
+                        result_dict["confidences"][i]["plant_name"] = plant.name
                     else:
                         disease = Disease.objects.get(slug=slug_label)
 
@@ -89,6 +89,8 @@ class PlantImageSearch(views.APIView):
                         result_dict["confidences"][i]["diagnosis"] = "not healthy"
                         result_dict["confidences"][i]["disease_id"] = disease.id
                         result_dict["confidences"][i]["plant_id"] = disease.plant_id
+                        result_dict["confidences"][i]["diagnosis"] = disease.name
+                        result_dict["confidences"][i]["plant_name"] = disease.plant.name
 
                 return Response(result_dict)
             except Exception as error:
