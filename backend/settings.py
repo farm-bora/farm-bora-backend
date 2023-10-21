@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-f*g!juv^^#5*_*jn-s6ei@f^ysmu(j-qnwq!ok6nso-unhbxw5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -144,12 +144,14 @@ REST_FRAMEWORK = {
     "DEFAULT_SCHEMA_CLASS": "drf_spectacular.openapi.AutoSchema",
 }
 
-CORS_ALLOWED_ORIGINS = (
-    "http://localhost:3000",
-    "http://localhost:8000",
-)
+# CORS_ALLOWED_ORIGINS = (
+#     "http://localhost:3000",
+#     "http://localhost:8000",
+# )
 
-CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+# CSRF_TRUSTED_ORIGINS = ["http://localhost:3000"]
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 SPECTACULAR_SETTINGS = {
     "TITLE": "Leaf AI Project",
