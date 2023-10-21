@@ -1,21 +1,30 @@
-from rest_framework import generics, views
-from rest_framework.response import Response
-import base64
 import uuid
 import json
+import base64
+from rest_framework import generics, views
+from rest_framework.response import Response
 from gradio_client import Client
+from pathlib import Path
+
+from ibm_watson import TextToSpeechV1
+from ibm_cloud_sdk_core.authenticators import IAMAuthenticator
 
 from .models import Plant, Disease
 from .serializers import (
     PlantSerializer,
     PlantDiseaseSearchSerializer,
     DiseaseSerializer,
+    TTSSerializer,
 )
 
 import environ
 
 # Initialise environment variables
+environ.Env.read_env()
+
 env = environ.Env()
+
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 class PlantList(generics.ListAPIView):
@@ -105,3 +114,41 @@ class PlantImageSearch(views.APIView):
                 return Response(result_dict, 503)
         else:
             return Response(serializer.errors, status=422)
+
+
+class TextToSpeech(views.APIView):
+    """Convert text to speech using IBM Watson TTS"""
+
+    serializer_class = TTSSerializer
+
+    def post(self, request, format=None):
+        serializer = TTSSerializer(data=request.data)
+        if serializer.is_valid():
+            text = serializer.data["text"]
+            authenticator = IAMAuthenticator(env("tts_apikey"))
+            text_to_speech = TextToSpeechV1(authenticator=authenticator)
+
+            text_to_speech.set_service_url(env("tts_url"))
+            fname = f"media/{uuid.uuid4()}.wav"
+            with open(BASE_DIR / fname, "wb") as audio_file:
+                audio_file.write(
+                    text_to_speech.synthesize(
+                        text, voice="en-US_AllisonV3Voice", accept="audio/wav"
+                    )
+                    .get_result()
+                    .content
+                )
+                result_dict = {"path": fname}
+
+            return Response(result_dict)
+        else:
+            return Response(serializer.errors, status=422)
+
+
+#     curl -X POST -u "apikey:{apikey}" \
+# --header "Content-Type: application/json" \
+# --header "Accept: audio/wav" \
+# --data "{\"text\":\"hello world\"}" \
+# --output hello_world.wav \
+# "{url}/v1/synthesize?voice=en-US_MichaelV3Voice"
+#

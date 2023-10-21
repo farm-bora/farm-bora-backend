@@ -5,6 +5,8 @@ django-environ==0.11.2
 djangorestframework==3.14.0
 drf-spectacular==0.26.5
 gunicorn==21.2.0
+ibm-cloud-sdk-core==3.17.2
+ibm-watson==7.0.1
 packaging==23.1
 pytz==2023.3.post1
 sqlparse==0.4.4

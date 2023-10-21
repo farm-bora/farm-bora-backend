@@ -24,3 +24,7 @@ class PlantSerializer(serializers.ModelSerializer):
 
 class PlantDiseaseSearchSerializer(serializers.Serializer):
     image_base64 = serializers.CharField()
+
+
+class TTSSerializer(serializers.Serializer):
+    text = serializers.CharField()
