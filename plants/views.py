@@ -12,6 +12,11 @@ from .serializers import (
     DiseaseSerializer,
 )
 
+import environ
+
+# Initialise environment variables
+env = environ.Env()
+
 
 class PlantList(generics.ListAPIView):
     queryset = Plant.objects.all()
@@ -59,7 +64,8 @@ class PlantImageSearch(views.APIView):
                 f.write(base64.b64decode(encoded_image))
 
             try:
-                client = Client("http://localhost:7860/")
+                ML_URL = env("ML_URL", default="http://localhost:7860/")
+                client = Client(ML_URL)
                 result = client.predict(fpath, api_name="/predict")
                 with open(result[0], "r") as f:
                     result_json = f.read()
